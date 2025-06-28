@@ -1,35 +1,31 @@
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const items = mobileMenu.querySelectorAll('.menu-item');
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('overlay');
+  const closeMenu = document.getElementById('closeMenu');
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+  });
 
-      if (!mobileMenu.classList.contains('hidden')) {
-        // Show each menu item one by one (row-by-row)
-        items.forEach((item, index) => {
-          setTimeout(() => {
-            item.classList.remove('opacity-0', 'translate-y-5');
-            item.classList.add('opacity-100', 'translate-y-0');
-          }, index * 100); // Delay increases row by row
-        });
-      } else {
-        // Reset to hidden state for next time
-        items.forEach((item) => {
-          item.classList.remove('opacity-100', 'translate-y-0');
-          item.classList.add('opacity-0', 'translate-y-5');
-        });
-      }
-    });
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+  });
 
-    const toggleBtn = document.getElementById('whatsappToggle');
-    const popup = document.getElementById('whatsappPopup');
-    const closeBtn = document.getElementById('closePopup');
+  overlay.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+  });
 
-    toggleBtn.addEventListener('click', () => {
-        popup.classList.toggle('hidden');
-    });
+  const toggleBtn = document.getElementById('whatsappToggle');
+  const popup = document.getElementById('whatsappPopup');
+  const closeBtn = document.getElementById('closePopup');
 
-    closeBtn.addEventListener('click', () => {
-        popup.classList.add('hidden');
-    });
+  toggleBtn.addEventListener('click', () => {
+      popup.classList.toggle('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+      popup.classList.add('hidden');
+  });
