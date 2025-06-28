@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazza_henna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head> 
+<body class="bg-slate-300">
+<header class="bg-white shadow-md">
+  <section class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <div class="flex items-center space-x-4">
+      <img src="./images/logo.jpg" alt="Logo" class="w-14 rounded-full sm:w-20">
+      <h1 class="text-lg sm:text-xl md:text-2xl font-bold text-black">JAZZA HENNA</h1>
+    </div>
+
+    <nav class="hidden lg:flex space-x-6 text-black text-lg font-medium">
+      <a href="" class="hover:text-[#5a3e22] transition">Home</a>
+      <a href="" class="hover:text-[#5a3e22] transition">Shop</a>
+      <a href="" class="hover:text-[#5a3e22] transition">About Us</a>
+      <a href="" class="hover:text-[#5a3e22] transition">Contact</a>
+    </nav>
+
+    <div class="lg:hidden">
+      <button id="menuToggle" class="bg-[#432C0F] text-white px-4 py-2 rounded-full shadow-md">
+        ☰ Menu
+      </button>
+    </div>
+  </section>
+
+    <nav id="mobileMenu" class="bg-[#e3e3e3] text-center mb-1 lg:hidden hidden flex-col px-4 py-2 space-y-2 text-black text-base border-t">
+        <a href="#" class=" hover:border-b border-black hover:text-[#5a3e22] menu-item transform opacity-0 translate-y-5 transition-all duration-500 delay-[100ms] ">Home</a><br>
+        <a href="#" class="menu-item transform opacity-0 translate-y-5 transition-all duration-500 delay-[200ms]">Shop</a><br>
+        <a href="#" class="menu-item transform opacity-0 translate-y-5 transition-all duration-500 delay-[300ms]">About Us</a><br>
+        <a href="#" class="menu-item transform opacity-0 translate-y-5 transition-all duration-500 delay-[400ms]">Contact</a>
+    </nav>
+
+    <section class="main relative h-[200px] flex justify-center items-center mg:h-[250px] lg:h-[50vh] ">
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+        <h1 class="font-semibold text-white text-center relative z-10">
+            Adorn Your Hands With Traditions <br>
+            <span class="font-bold">Shop the Finest Mehandi Today!</span>
+        </h1>
+    </section>
+
+    <section class="search">
+
+    </section>
+
+    <section class="combo px-4 py-8">
+        <h2 class="text-2xl font-semibold mb-6 text-center sm:text-start">Recommended Combo</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <!-- Card Start -->
+            <div class="relative bg-white border rounded-2xl shadow-md p-4 flex flex-col items-center text-start">
+            <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">-10%</div>
+            <img src="./images/box.jpg" alt="Product" class="w-[140px] h-[140px] object-contain mt-4" />
+            <h3 class="mt-4 font-semibold text-lg">Lorum items</h3>
+            <p class="text-sm text-gray-600 mt-1">Lorem ipsum dolor sit amet consectetur. Varius egestas bibendum vulputate.</p>
+            <p class="mt-4 text-base font-semibold">₹ 189/- <span class="line-through text-gray-500 text-sm">₹ 200</span></p>
+            </div>
+            <!-- Card End -->
+
+            <!-- Copy the above card and adjust discount/images as needed -->
+            <div class="relative bg-white border rounded-2xl shadow-md p-4 flex flex-col items-center text-start">
+            <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">-15%</div>
+            <img src="./images/box.jpg" alt="Product" class="w-[140px] h-[140px] object-contain mt-4" />
+            <h3 class="mt-4 font-semibold text-lg">Lorum items</h3>
+            <p class="text-sm text-gray-600 mt-1">Lorem ipsum dolor sit amet consectetur. Varius egestas bibendum vulputate.</p>
+            <p class="mt-4 text-base font-semibold">₹ 189/- <span class="line-through text-gray-500 text-sm">₹ 200</span></p>
+            </div>
+
+            <div class="relative bg-white border rounded-2xl shadow-md p-4 flex flex-col items-center text-start">
+            <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">-9%</div>
+            <img src="./images/box.jpg" alt="Product" class="w-[140px] h-[140px] object-contain mt-4" />
+            <h3 class="mt-4 font-semibold text-lg">Lorum items</h3>
+            <p class="text-sm text-gray-600 mt-1">Lorem ipsum dolor sit amet consectetur. Varius egestas bibendum vulputate.</p>
+            <p class="mt-4 text-base font-semibold">₹ 189/- <span class="line-through text-gray-500 text-sm">₹ 200</span></p>
+            </div>
+
+            <div class="relative bg-white border rounded-2xl shadow-md p-4 flex flex-col items-center text-start">
+            <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">-10%</div>
+            <img src="./images/box.jpg" alt="Product" class="w-[140px] h-[140px] object-contain mt-4" />
+            <h3 class="mt-4 font-semibold text-lg">Lorum items</h3>
+            <p class="text-sm text-gray-600 mt-1">Lorem ipsum dolor sit amet consectetur. Varius egestas bibendum vulputate.</p>
+            <p class="mt-4 text-base font-semibold">₹ 189/- <span class="line-through text-gray-500 text-sm">₹ 200</span></p>
+
+            </div>
+            <!-- WhatsApp Floating Icon (Toggle Trigger) -->
+            <button id="whatsappToggle" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl z-50 hover:scale-110 transition">
+            <img src="./images/whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6" />
+            </button>
+
+            <!-- WhatsApp Chat Popup (Hidden by default) -->
+            <div id="whatsappPopup" class="fixed bottom-24 right-6 z-50 w-[320px] bg-gray-900 text-white rounded-xl shadow-xl hidden animate-fade-in">
+            <!-- Header -->
+            <div class="flex items-center justify-between px-4 py-3 border-b border-gray-700">
+                <div class="flex items-center space-x-3">
+                <img src="./images/logo.jpg" alt="Jazza Henna Logo" class="w-10 h-10 rounded-full border border-white" />
+                <div>
+                    <h4 class="font-semibold text-sm">Jazza Henna</h4>
+                    <span class="text-xs text-green-400">Online</span>
+                </div>
+                </div>
+                <button id="closePopup" class="text-gray-400 hover:text-white text-lg">&times;</button>
+            </div>
+
+            <!-- Message Box -->
+            <div class="p-4">
+                <div class="bg-gray-800 text-sm rounded-xl px-4 py-3 relative text-left">
+                <span class="absolute left-2 -top-2 text-xl">🌿</span>
+                <p>
+                    <span class="font-semibold">Want natural mehndi?</span><br>
+                    We offer homemade mehndi cones — safe, organic, and fresh! 🌸<br>
+                    Reach out now for quick help or custom orders!
+                </p>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="px-4 pb-4">
+                <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
+                class="block w-full text-center bg-green-500 text-white font-semibold py-2 rounded-full hover:bg-green-600 transition">
+                <i class="fab fa-whatsapp mr-1"></i> Chat on WhatsApp
+                </a>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#f9f9f9] text-gray-700 px-4 sm:px-6 py-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+
+        <!-- Social Icons -->
+        <div class="w-full md:w-auto flex justify-center md:justify-start space-x-5">
+        <a href="https://instagram.com/jazza__henna" target="_blank" aria-label="Instagram"><i class="fab fa-instagram text-xl hover:text-black"> Instagram 👈🏻</i></a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="w-full md:w-auto text-center md:text-left">
+        <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-2">
+            <li><a href="./index.html" class="hover:text-black">Home</a></li>
+            <li><a href="#" class="hover:text-black">Shop</a></li>
+            <li><a href="#" class="hover:text-black">About Us</a></li>
+            <li><a href="#" class="hover:text-black">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-8 border-black w-2/3 sm:w-1/2 mx-auto" />
+
+    <!-- Bottom Text -->
+    <div class="text-center text-sm text-gray-600 space-y-3 px-4">
+        <p>© 2025 <span class="font-medium">littlelibrary</span>. All Rights Reserved</p>
+        <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="hover:text-black">Terms of use</a>
+        <a href="#" class="hover:text-black">Privacy Policy</a>
+        <a href="#" class="hover:text-black">Refund Policy</a>
+        </div>
+    </div>
+    </footer>
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
