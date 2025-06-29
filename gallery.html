@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazza_henna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head> 
+<body class="bg-slate-300">
+<header class="bg-white shadow-md">
+  <section class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <div class="flex items-center space-x-4">
+      <img src="./images/logo.jpg" alt="Logo" class="w-14 rounded-full sm:w-20">
+      <h1 class="text-lg sm:text-xl md:text-2xl font-bold text-black">JAZZA HENNA</h1>
+    </div>
+
+    <nav class="hidden lg:flex space-x-6 text-black text-lg font-medium">
+      <a href="./index.html" class="hover:text-[#432C0F] transition">Home</a>
+      <a href="./shop.html" class="hover:text-[#432C0F] transition">Shop</a>
+      <a href="./gallery.html" class="hover:text-[#432C0F] transition">Gallery</a>
+      <a href="./about.html" class="hover:text-[#432C0F] transition">About Us</a>
+      <a href="./contact.html" class="hover:text-[#432C0F] transition">Contact</a>
+    </nav>
+
+    <div class="lg:hidden">
+        <button id="menuToggle"
+        class="lg:hidden bg-[#432C0F] text-white px-4 py-2 rounded-full shadow-md  z-50">
+        ☰ Menu
+        </button>
+    </div>
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    </section>
+
+    <nav id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 flex flex-col p-6 space-y-4">
+        <button id="closeMenu" class="self-end text-xl font-bold">×</button>
+        <a href="./index.html" class="text-lg hover:text-[#432C0F]">Home</a>
+        <a href="./shop.html" class="text-lg hover:text-[#432C0F]">Shop</a>
+        <a href="./gallery.html" class="text-lg hover:text-[#432C0F] ">Gallery</a>
+        <a href="./about.html" class="text-lg hover:text-[#432C0F]">About Us</a>
+        <a href="./contact.html" class="text-lg hover:text-[#432C0F]">Contact</a>
+    </nav>
+    
+    <section class="relative h-[50px]  text-center mg:h-[250px] lg:h-[50vh] mt-5">
+        <h1 class="font-bold text-black text-center relative z-10 text-4xl">
+            Gallery 
+            <span class="font-bold text-[#432C0F]"></span>
+        </h1>
+    </section>
+
+    <section class="search">
+
+    </section>
+
+    <section class="combo px-4 py-8">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <!-- Card Start -->
+            <div class="relative bg-white border rounded-2xl shadow-lg p-2 flex flex-col items-center text-start">
+                <img src="./images/pic1.jpg" alt="" class="">
+            </div>
+            <!-- Card End -->
+            <div class="relative bg-white border rounded-2xl shadow-lg p-4 flex flex-col items-center text-start">
+                <img src="./images/pic2.jpg" alt="">
+            </div>
+
+            <div class="relative bg-white border rounded-2xl shadow-lg p-4 flex flex-col items-center text-start">
+                <img src="./images/pic3.jpg" alt="">
+            </div>
+
+            <div class="relative bg-white border rounded-2xl shadow-lg p-4 flex flex-col items-center text-start">
+                <img src="./images/pic4.jpg" alt="">
+            </div>    
+            
+            <div class="relative bg-white border rounded-2xl shadow-lg p-4 flex flex-col items-center text-start">
+                <img src="./images/pic5.jpg" alt="">
+            </div>
+
+            <h3 class="ml-2">For more visit our instagram </h3>
+
+        </div>
+            <!-- WhatsApp Floating Icon (Toggle Trigger) -->
+        <button id="whatsappToggle" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl z-50 hover:scale-110 transition">
+            <img src="./images/whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6" />
+        </button>
+
+            <!-- WhatsApp Chat Popup (Hidden by default) -->
+        <div id="whatsappPopup" class="fixed bottom-24 right-6 z-50 w-[320px] bg-gray-900 text-white rounded-xl shadow-xl hidden animate-fade-in">
+            <!-- Header -->
+            <div class="flex items-center justify-between px-4 py-3 border-b border-gray-700">
+                <div class="flex items-center space-x-3">
+                <img src="./images/logo.jpg" alt="Jazza Henna Logo" class="w-10 h-10 rounded-full border border-white" />
+                <div>
+                    <h4 class="font-semibold text-sm">Jazza Henna</h4>
+                    <span class="text-xs text-green-400">Online</span>
+                </div>
+                </div>
+                <button id="closePopup" class="text-gray-400 hover:text-white text-lg">&times;</button>
+            </div>
+
+            <!-- Message Box -->
+            <div class="p-4">
+                <div class="bg-gray-800 text-sm rounded-xl px-4 py-3 relative text-left">
+                <span class="absolute left-2 -top-2 text-xl">🌿</span>
+                <p>
+                    <span class="font-semibold">Want natural mehndi?</span><br>
+                    We offer homemade mehndi cones — safe, organic, and fresh! 🌸<br>
+                    Reach out now for quick help or custom orders!
+                </p>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="px-4 pb-4">
+                <a href="https://wa.me/919605500439" target="_blank"
+                class="block w-full text-center bg-green-500 text-white font-semibold py-2 rounded-full hover:bg-green-600 transition">
+                <i class="fab fa-whatsapp mr-1"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-[#f9f9f9] text-gray-700 px-4 sm:px-6 py-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+
+
+        <div class="flex flex-col items-start space-y-2">
+        <!-- Logo and Heading on one line -->
+        <div class="flex items-center space-x-3">
+            <img src="./images/logo.jpg" alt="Logo" class="w-14 h-14 rounded-full">
+            <h1 class="text-xl font-semibold">Jazza Henna</h1>
+        </div>
+
+        <!-- Paragraph below -->
+        <p class="text-sm text-gray-600">
+            Your trusted destination for quality products and exceptional service.
+        </p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="w-full md:w-auto flex justify-start md:justify-start space-x-5">
+        <a href="https://instagram.com/jazza__henna" target="_blank" aria-label="Instagram"><i class="fab fa-instagram text-xl hover:text-black"> Instagram 👈🏻</i></a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="w-full md:w-auto text-start md:text-left">
+        <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-2">
+            <li><a href="./index.html" class="hover:text-black">Home</a></li>
+            <li><a href="./shop.html" class="hover:text-black">Shop</a></li>
+            <li><a href="./gallery.html" class="hover:text-[#432C0F] transition">Gallery</a></li>
+            <li><a href="./about.html" class="hover:text-black">About Us</a></li>
+            <li><a href="./contact.html" class="hover:text-black">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-8 border-black w-[80%] sm:w-1/2 mx-auto" />
+
+    <!-- Bottom Text -->
+    <div class="text-center text-sm text-gray-600 space-y-3 px-4">
+        <p>© 2025 <span class="font-medium">Jazza Henna</span>. All Rights Reserved</p>
+        <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="hover:text-black">Terms of use</a>
+        <a href="#" class="hover:text-black">Privacy Policy</a>
+        </div>
+    </div>
+    </footer>
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
